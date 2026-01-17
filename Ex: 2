@@ -1,0 +1,24 @@
+Ler dois numeros impares, a e b, e imprimir o produto de todos os numeros de a té b
+
+USANDO FOR -------------------------------
+
+a = int(input('Digite o primeiro numero: '))
+b = int(input('Digite o segundo numero: '))
+
+produto = 1
+for i in range(a, b + 1, 2):
+    produto = produto * i
+
+print(produto)
+
+USANDO WHILE ---------------------
+
+a = int(input('Digite o primeiro numero: '))
+b = int(input('Digite o segundo numero: '))
+
+produto = 1
+while a <= b:
+  produto = produto * a
+  a = a + 2
+
+print(produto)
