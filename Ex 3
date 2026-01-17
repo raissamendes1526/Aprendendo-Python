@@ -1,0 +1,11 @@
+ler uma quantidade valores, ler os valores e imprimir a média entre eles
+
+m = int(input('Digite o numero m: '))
+
+soma = 0
+for i in range(m):
+    valor = int(input('Digite um valor: '))
+    soma = soma + valor
+
+media = soma / m
+print(media)
