@@ -1,4 +1,4 @@
-ler uma quantidade valores, ler os valores e imprimir a média entre eles
+ler uma quantidade m de valores, e imprimir a média entre eles
 
 m = int(input('Digite o numero m: '))
 
