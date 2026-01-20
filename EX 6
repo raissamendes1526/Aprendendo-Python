@@ -1,0 +1,29 @@
+digito = int(input('Escolha o digito: '))
+numero = int(input('Digite um numero: '))
+
+contador = 0
+while numero >= 1:
+    
+    resto = numero % 10
+    if resto == digito:
+        contador = contador + 1
+    
+
+    numero = numero // 10
+
+if contador > 0: 
+    print(contador)
+else:
+    print('nao')
+
+#---> FORMA COM STRING
+
+digito = input('Escolha o digito: ')
+numero = input('Digite um numero: ')
+
+contador = numero.count(digito)
+
+if contador > 0:
+    print(contador)
+else:
+    print('nao')
