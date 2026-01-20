@@ -1,0 +1,9 @@
+num = int(input('Digite um valor: '))
+soma = 0
+
+while num != 0:
+    if num % 2 == 0:
+        print(f'O número {num} é par')
+        soma = soma + num
+    num = int(input('Digite um valor: '))
+print(f'a soma de todos os pares digitados é {soma}')
