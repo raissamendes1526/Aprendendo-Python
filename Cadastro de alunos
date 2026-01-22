@@ -1,0 +1,26 @@
+# Programa que cadastra alunos, recebe nome, idade, notas, calcula a média, e diz se o aluno esta aprovado ou reprovado
+
+numAlunos = int(input('Digite quantos alunos deseja cadastrar: '))
+
+for i in range(numAlunos):
+    nome = str(input('Nome: '))
+    idade = int(input('Idade: '))
+    numProvas = int(input('Quantidade de provas: '))
+
+    notasProvas = []
+    total = 0
+    for i in range (numProvas):
+        nota = int(input(f'Nota da prova {i + 1}: '))
+        total = total + nota
+        notasProvas.append(nota)
+    
+    media = total / numProvas
+    if media > 7:
+        situacao = 'Aprovado'
+    else:
+        situacao = 'Reprovado'
+
+    Aluno = {'Nome: ': nome, 'Idade: ': idade, 'Notas: ': notasProvas, 'Média: ': media, 'Situacao: ': situacao}
+    
+    for chave, valor in Aluno.items:
+        print(chave, valor)
