@@ -1,0 +1,31 @@
+numero = int(input('Digite um numero: '))
+lista = []
+
+while numero != 0:
+    lista.append(numero)
+    numero = int(input('Digite um numero: '))
+
+print(lista)
+
+def maior(lista):
+    maior = lista[0]
+
+    for i in lista:
+        if i > maior:
+            maior = i
+
+    return maior
+
+print(f'Número maior: {maior(lista)}')
+
+
+def menor(lista):
+    menor = lista[0]
+
+    for i in lista:
+        if i < menor:
+            menor = i
+
+    return menor
+
+print(f'O numero menor é: {menor(lista)}')
