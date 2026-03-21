@@ -1,0 +1,17 @@
+senha = '@Raissa15'
+tentativa = input('Digite a senha: ')
+
+tent = 3
+
+while senha != tentativa:
+    print('Senha incorreta')
+    print(f'Restam apenas {tent-1}')
+    tent = tent - 1
+    tentativa = input('Digite a senha: ')
+
+    if tent == 0:
+        print('Numero de tentativas excedidas')
+        break
+    
+if senha == tentativa:
+    print('Senha correta')
