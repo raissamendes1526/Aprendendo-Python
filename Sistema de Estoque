@@ -1,0 +1,117 @@
+import pprint
+
+#Login
+usuarios = {
+    'Rai150207': {
+        'senha': '@Raissa15'
+    }
+}
+
+
+#Produtos no estoque
+estoque = {
+
+    'arroz': {
+        'quantidade': 3,
+        'preco unitário': 20,
+        'vendido ': 3
+        },
+    
+    'feijao': {
+        'quantidade': 5,
+        'preco unitário': 13.99,
+        'quantidade de vendido': 5
+    }
+
+}
+
+def listar_todos_produtos(estoque): 
+    pp = pprint.PrettyPrinter(depth=4, width=1)
+    pp.pprint(estoque)
+
+def adicionar(estoque):
+    produto = input('Nome do produto: ')
+    quantidade = input('Quantidade: ')
+    preco = float(input('Preço: '))
+    vendidos = int(input('Quantidade de vendido: '))
+
+    estoque[produto] = { 'quantidade': quantidade,
+        'preco unitário': preco,
+        'quantidade de vendido': vendidos}
+
+    print(estoque[produto])
+    pp = pprint.PrettyPrinter(depth=4, width=1)
+    pp.pprint(estoque)
+    
+
+
+def remover(estoque):
+    produto = input('Qual produto pretende excluir: ')
+    del estoque[produto]
+
+    print(estoque[produto])
+    pp = pprint.PrettyPrinter(depth=4, width=1)
+    pp.pprint(estoque)
+
+def atualizar(estoque):
+    produto = input('Qual produto deseja alterar: ')
+    item = input('Qual item deseja atualizar: ')
+    
+    if item == 'preco unitário':
+        novo_valor = float(input('Digite o novo valor: '))
+    else:
+        novo_valor = int(input('Digite o novo valor: '))
+
+    estoque[produto][item] = novo_valor
+
+def pesquisar(estoque):
+    produto = input('Digite qual produto quer pesquisar: ')
+    print(estoque[produto])
+    
+
+usuario = input('Usuário: ')
+senha = input('Senha: ')
+
+
+if usuario in usuarios:
+    if usuarios[usuario]['senha'] == senha:
+        print('Login válido')
+
+        print('''   MENU: 
+        1 - Listar todos os cadastrados produtos
+        2 - Adicionar produtos 
+        3 - Remover produtos
+        4 - Atualizar Cadastro
+        5 - Pesquisar produto''')
+
+
+        funcao = int(input('Digite o que deseja: '))
+
+        if funcao == 1:
+            listar_todos_produtos(estoque)
+    
+        if funcao == 2:
+            adicionar(estoque)
+
+        if funcao == 3:
+            remover(estoque)
+
+        if funcao == 4:
+            atualizar(estoque)
+
+        if funcao == 5:
+            pesquisar(estoque)
+    
+    else: 
+        print('Senha Inválido')
+else: 
+    print('Usuário inválido')
+
+
+
+
+
+
+   
+
+
